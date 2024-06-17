@@ -1,0 +1,22 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "vgdb",
+			"request": "launch",
+			"name": "C/C++ Debug Launch",
+			"debugger": "gdb",
+			"program": "${workspaceFolder}/cpp00/ex00/megaphone",
+			"args": ["${input:args}"],
+			"cwd": "${workspaceFolder}"
+		}
+	],
+	"inputs": [
+		{
+		  "id": "args",
+		  "type":"promptString",
+		  "description": "args",
+		  "default": "",
+		},
+	  ]
+}
