@@ -4,11 +4,21 @@
 		{
 			"type": "vgdb",
 			"request": "launch",
-			"name": "C/C++ Debug Launch",
+			"name": "vdbg ex00",
 			"debugger": "gdb",
 			"program": "${workspaceFolder}/ex00/megaphone",
 			"args": ["${input:args}"],
-			"cwd": "${workspaceFolder}"
+			"cwd": "${workspaceFolder}/ex00",
+		},
+		{
+			"type": "vgdb",
+			"request": "launch",
+			"name": "vdbg ex01",
+			"debugger": "gdb",
+			"program": "${workspaceFolder}/ex01/phone_book",
+			"args": [],
+			"cwd": "${workspaceFolder}/ex01",
+
 		}
 	],
 	"inputs": [

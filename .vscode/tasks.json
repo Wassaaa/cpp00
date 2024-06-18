@@ -1,0 +1,40 @@
+//task that makes at the CWD of the caller
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "extract-name",
+            "type": "shell",
+            "command": "grep",
+            "args": [
+                "^NAME",
+                "Makefile"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "extract-name"
+        }
+	]
+}
