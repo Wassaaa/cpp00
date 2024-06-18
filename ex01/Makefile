@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aklein <aklein@student.42.fr>              +#+  +:+       +#+         #
+#    By: aklein <aklein@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/16 17:15:14 by aklein            #+#    #+#              #
-#    Updated: 2024/06/17 21:27:25 by aklein           ###   ########.fr        #
+#    Updated: 2024/06/18 05:35:31 by aklein           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phone_book
 
 CC					=	c++
 CC_STRICT 			=	$(CC) $(CCF_STRICT)
@@ -20,7 +20,7 @@ SRC_DIR				=	.
 
 CCF_STRICT			=	-Wall -Wextra -Werror -g
 
-SRCS				=
+SRCS				=	Contact.cpp PhoneBook.cpp main.cpp
 
 OBJECTS				=	$(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
 
