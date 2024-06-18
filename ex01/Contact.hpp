@@ -1,4 +1,6 @@
-#include <iostream>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+# include <iostream>
 
 class Contact
 {
@@ -14,7 +16,9 @@ public:
 
 	Contact();
 	~Contact();
+	bool	is_valid(void);
 	void	print_contact(void);
+	void	print_details(void);
 	void	set(
 		int			index,
 		std::string first_name,
@@ -24,3 +28,5 @@ public:
 		std::string darkest_secret
 	);
 };
+
+#endif

@@ -18,6 +18,13 @@ void Contact::set(
 	this->is_empty = false;
 }
 
+bool Contact::is_valid(void)
+{
+	if (this->is_empty)
+		return (false);
+	return (true);
+}
+
 std::string	fix_print_width(std::string str)
 {
 	int	len;
@@ -31,6 +38,17 @@ std::string	fix_print_width(std::string str)
 			str = " " + str;
 		return (str);
 	}
+}
+
+void Contact::print_details(void)
+{
+	std::cout << "################  DETAILS  ################" << std::endl;
+	std::cout << "First Name: "<< this->first_name << std::endl;
+	std::cout << "Last Name: "<< this->last_name << std::endl;
+	std::cout << "Nickname: "<< this->nickname << std::endl;
+	std::cout << "Phone Number: "<< this->phone_number << std::endl;
+	std::cout << "Darkest Secret: "<< this->darkest_secret << std::endl;
+	std::cout << "###########################################" << std::endl;
 }
 
 void Contact::print_contact(void)
