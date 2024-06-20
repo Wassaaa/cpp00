@@ -40,16 +40,20 @@ void PhoneBook::run(void)
 	}
 }
 
+bool	all_digits(std::string str)
+{
+	for (char c : str)
+		if (!std::isdigit(c))
+			return (false);
+	return (true);
+}
+
 bool	check_number(std::string field, std::string field_value)
 {
 	if (field != "Phone number")
 		return (true);
-	else
-	{
-		for (char c : field_value)
-			if (!std::isdigit(c))
-				return (false);
-	}
+	if (!all_digits(field_value))
+		return (false);
 	return (true);
 }
 
@@ -125,6 +129,11 @@ void	PhoneBook::check_contact(Contact contacts[PhoneBook::size])
 		std::getline(std::cin, index_string);
 		if (std::cin.eof())
 			exit(1);
+		if (index_string.empty() || !all_digits(index_string))
+		{
+			std::cout << "Invalid index!" << std::endl;
+			continue ;
+		}
 		index_to_check = std::stoi(index_string);
 		if (index_to_check < 0 || index_to_check > this->size - 1)
 		{
