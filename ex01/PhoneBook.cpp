@@ -53,6 +53,14 @@ bool	check_number(std::string field, std::string field_value)
 	return (true);
 }
 
+bool has_printable(std::string str)
+{
+	for (char c : str)
+		if (std::isprint(c) && !std::isspace(c))
+			return (true);
+	return (false);
+}
+
 std::string	ask_info(std::string field)
 {
 	std::string field_value;
@@ -63,7 +71,7 @@ std::string	ask_info(std::string field)
 		std::getline(std::cin, field_value);
 		if (std::cin.eof())
 			exit(1);
-		if (field_value.empty())
+		if (field_value.empty() || !has_printable(field_value))
 		{
 			std::cout << "Field cannot be empty!" << std::endl;
 			continue;
@@ -113,7 +121,7 @@ void	PhoneBook::check_contact(Contact contacts[PhoneBook::size])
 
 	while (42)
 	{
-		std::cout << "Enter an index to check: ";
+		std::cout << "Enter an index to check (0 - " << PhoneBook::size - 1 << "): ";
 		std::getline(std::cin, index_string);
 		if (std::cin.eof())
 			exit(1);
