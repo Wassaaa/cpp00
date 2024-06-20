@@ -1,4 +1,6 @@
-#include "Contact.hpp"
+#ifndef PHONEBOOK_HPP
+# include "Contact.hpp"
+# include <iostream>
 
 class PhoneBook
 {
@@ -23,3 +25,5 @@ public:
 				PhoneBook(void);
 				~PhoneBook(void);
 };
+
+#endif
