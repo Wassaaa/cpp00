@@ -5,12 +5,12 @@ void PhoneBook::run(void)
 	std::string	command;
 	PhoneBook	phone_book;
 
-	phone_book.create_contact("John12345678", "Smith", "john2", "1234567890", "I am John Smith");
-	phone_book.create_contact("John", "Doe", "john", "1234567890", "I am John Doe");
-	phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
-	phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
-	phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
-	phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
+	// phone_book.create_contact("John12345678", "Smith", "john2", "1234567890", "I am John Smith");
+	// phone_book.create_contact("John", "Doe", "john", "1234567890", "I am John Doe");
+	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
+	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
+	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
+	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
 	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
 	// phone_book.create_contact("Jane", "Doe", "jane", "0987654321", "I am Jane Doe");
 	// phone_book.create_contact("duped", "Doe", "jane", "0987654321", "I am Jane Doe");
@@ -97,7 +97,7 @@ void	PhoneBook::add_contact(void)
 	std::string	nickname;
 	std::string	phone_number;
 	std::string	darkest_secret;
-	Contact contact;
+	Contact		contact;
 
 	first_name = ask_info("First name");
 	last_name = ask_info("Last name");
